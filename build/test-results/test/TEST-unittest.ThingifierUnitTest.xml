@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittest.ThingifierUnitTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2024-01-29T23:36:18" hostname="Omars-MacBook-Pro.local" time="2.313">
+  <properties/>
+  <testcase name="testGetAllTodosHeaders()" classname="unittest.ThingifierUnitTest" time="1.732"/>
+  <testcase name="testCreateTodoWithXmlBody()" classname="unittest.ThingifierUnitTest" time="0.057"/>
+  <testcase name="testGetAllTodos()" classname="unittest.ThingifierUnitTest" time="0.034"/>
+  <testcase name="testFetchHeadersForNonExistingTodo()" classname="unittest.ThingifierUnitTest" time="0.038"/>
+  <testcase name="testGetTodoHeader()" classname="unittest.ThingifierUnitTest" time="0.037"/>
+  <testcase name="testGetAllTodosAsXml()" classname="unittest.ThingifierUnitTest" time="0.13"/>
+  <testcase name="testCreateTodoWithNonBooleanStatusFail()" classname="unittest.ThingifierUnitTest" time="0.034"/>
+  <testcase name="testServerIsRunning()" classname="unittest.ThingifierUnitTest" time="0.03"/>
+  <testcase name="testGetTodoById()" classname="unittest.ThingifierUnitTest" time="0.027"/>
+  <testcase name="testGetTodoWithNonExistingIdFail()" classname="unittest.ThingifierUnitTest" time="0.033"/>
+  <testcase name="testGetTodoWithDoneStatusFalse()" classname="unittest.ThingifierUnitTest" time="0.045"/>
+  <testcase name="testDeleteTodo()" classname="unittest.ThingifierUnitTest" time="0.031"/>
+  <testcase name="testFetchTodoWithNonExistentFilter()" classname="unittest.ThingifierUnitTest" time="0.043"/>
+  <testcase name="testUpdateTodoUsingIdWithPost()" classname="unittest.ThingifierUnitTest" time="0.031"/>
+  <system-out><![CDATA[Set Up todo with ID 52
+Set Up todo with ID 53
+Set Up todo with ID 55
+Set Up todo with ID 56
+Set Up todo with ID 57
+Set Up todo with ID 58
+Set Up todo with ID 59
+Set Up todo with ID 61
+Set Up todo with ID 62
+Set Up todo with ID 63
+Set Up todo with ID 64
+Set Up todo with ID 65
+Set Up todo with ID 66
+Set Up todo with ID 67
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
