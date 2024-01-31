@@ -23,8 +23,8 @@ public class ToDoUnitTest {
     private int newId1;
     private int newId2;
     private int fakeId = -1;
-    private final String taskTitle = "Test task";
-    private final String taskDescription = "This is a description of the test task";
+    private final String taskTitle = "Test To Do";
+    private final String taskDescription = "This is a description of the test To Do";
     private final String newTaskTitle = "New title";
     private final String newTaskDescription = "New description";
     private boolean deleted = false;
@@ -54,7 +54,7 @@ public class ToDoUnitTest {
 
     // Create a todo before each test runs
     @BeforeEach
-    public void createTest() {
+    public void createToDo() {
         Map<String, String> testParams = new HashMap<>();
         testParams.put("title", taskTitle);
         testParams.put("description", taskDescription);
@@ -71,7 +71,7 @@ public class ToDoUnitTest {
 
     // Delete the todo after each test runs
     @AfterEach
-    public void deleteTest(){
+    public void deleteToDo(){
         if(!deleted){
             Response response = given()
                     .pathParam("id", testId)
@@ -85,7 +85,7 @@ public class ToDoUnitTest {
 
     // Test to get all todo headers
     @Test
-    void testGetAllHeaders(){
+    void testGetAllToDoHeaders(){
         Response response = given()
                 .when()
                 .head("/todos");
@@ -94,7 +94,7 @@ public class ToDoUnitTest {
 
     // Test to get all todo options
     @Test
-    void testGetAllOptions(){
+    void testGetAllToDoOptions(){
         Response response = given()
                 .when()
                 .options("/todos");
@@ -103,7 +103,7 @@ public class ToDoUnitTest {
 
     // Test to get all the todo ids with json
     @Test
-    void testGetAllIdsJson(){
+    void testGetAllToDosIdJson(){
         Response response = given()
                 .contentType("application/json")
                 .when()
@@ -113,7 +113,7 @@ public class ToDoUnitTest {
 
     // Test to get all the todo ids with xml
     @Test
-    void testGetAllIdsXml(){
+    void testGetAllToDosIdXml(){
         Response response = given()
                 .contentType("application/xml")
                 .when()
@@ -121,12 +121,12 @@ public class ToDoUnitTest {
         assertEquals(200, response.getStatusCode());
     }
 
-    // Test to get all todos with done status true
+    // Test to get all todos with done status false
     @Test
-    void testGetAllDoneToDo() {
+    void testGetAllNotDoneToDo() {
         Response response = given()
                 .when()
-                .get("/todos?doneStatus=true");
+                .get("/todos?doneStatus=false");
         assertEquals(200, response.getStatusCode());
     }
 
@@ -214,7 +214,7 @@ public class ToDoUnitTest {
 
     // Test to get the header of a todo with its id
     @Test
-    void testGetHeaderId(){
+    void testGetToDoHeaderId(){
         Response response = given()
                 .pathParam("id", testId)
                 .when()
@@ -266,6 +266,7 @@ public class ToDoUnitTest {
         assertEquals(200, response.getStatusCode());
     }
 
+    // Test to delete an existing todo
     @Test
     void testDeleteToDo(){
         Response response = given()
@@ -294,7 +295,7 @@ public class ToDoUnitTest {
         assertEquals(400, response.getStatusCode());
     }
 
-    // Test failure to get a todo with a non exisisting id
+    // Test failure to get a todo with a non-existing id
     @Test
     void testGetToDoFakeId(){
         Response response = given()
