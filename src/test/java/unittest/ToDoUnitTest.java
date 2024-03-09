@@ -1,9 +1,9 @@
 package unittest;
 
-import io.restassured.RestAssured;
-import static io.restassured.RestAssured.given;
+import io.restassured.RestAssured; //1
+import static io.restassured.RestAssured.given; // 3
 import static org.junit.jupiter.api.Assertions.*;
-import io.restassured.response.Response;
+import io.restassured.response.Response; // 2
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer.Random;

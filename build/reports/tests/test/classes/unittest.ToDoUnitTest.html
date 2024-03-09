@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - ThingifierUnitTest</title>
+<title>Test results - ToDoUnitTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>ThingifierUnitTest</h1>
+<h1>ToDoUnitTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/unittest.html">unittest</a> &gt; ThingifierUnitTest</div>
+<a href="../packages/unittest.html">unittest</a> &gt; ToDoUnitTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">14</div>
+<div class="counter">20</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.302s</div>
+<div class="counter">0.743s</div>
 <p>duration</p>
 </div>
 </td>
@@ -63,9 +63,6 @@
 <li>
 <a href="#tab0">Tests</a>
 </li>
-<li>
-<a href="#tab1">Standard output</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -78,96 +75,106 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testCreateTodoWithNonBooleanStatusFail()</td>
-<td class="success">0.034s</td>
+<td class="success">testCreateToDoJson()</td>
+<td class="success">0.054s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testCreateTodoWithXmlBody()</td>
-<td class="success">0.057s</td>
+<td class="success">testCreateToDoMalformedPayloadJson()</td>
+<td class="success">0.041s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testDeleteTodo()</td>
-<td class="success">0.031s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testFetchHeadersForNonExistingTodo()</td>
-<td class="success">0.038s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testFetchTodoWithNonExistentFilter()</td>
-<td class="success">0.043s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetAllTodos()</td>
-<td class="success">0.034s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetAllTodosAsXml()</td>
-<td class="success">0.130s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetAllTodosHeaders()</td>
-<td class="success">1.732s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testGetTodoById()</td>
+<td class="success">testCreateToDoMalformedPayloadXml()</td>
 <td class="success">0.027s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testGetTodoHeader()</td>
-<td class="success">0.037s</td>
+<td class="success">testCreateToDoXml()</td>
+<td class="success">0.035s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testGetTodoWithDoneStatusFalse()</td>
-<td class="success">0.045s</td>
+<td class="success">testDeleteToDo()</td>
+<td class="success">0.032s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testGetTodoWithNonExistingIdFail()</td>
-<td class="success">0.033s</td>
+<td class="success">testGetAllNotDoneToDo()</td>
+<td class="success">0.036s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testServerIsRunning()</td>
+<td class="success">testGetAllToDoHeaders()</td>
+<td class="success">0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetAllToDoOptions()</td>
+<td class="success">0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetAllToDosIdJson()</td>
+<td class="success">0.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetAllToDosIdXml()</td>
+<td class="success">0.041s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetOptionsId()</td>
+<td class="success">0.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetToDoFakeId()</td>
+<td class="success">0.041s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetToDoHeaderId()</td>
+<td class="success">0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetToDoIDJson()</td>
 <td class="success">0.030s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testUpdateTodoUsingIdWithPost()</td>
-<td class="success">0.031s</td>
+<td class="success">testGetToDoIDXml()</td>
+<td class="success">0.057s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testPatchToDoID()</td>
+<td class="success">0.036s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testServer()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdateToDoPost()</td>
+<td class="success">0.044s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdateToDoPut()</td>
+<td class="success">0.047s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdateToDoPutNoTitle()</td>
+<td class="success">0.038s</td>
 <td class="success">passed</td>
 </tr>
 </table>
-</div>
-<div id="tab1" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>Set Up todo with ID 52
-Set Up todo with ID 53
-Set Up todo with ID 55
-Set Up todo with ID 56
-Set Up todo with ID 57
-Set Up todo with ID 58
-Set Up todo with ID 59
-Set Up todo with ID 61
-Set Up todo with ID 62
-Set Up todo with ID 63
-Set Up todo with ID 64
-Set Up todo with ID 65
-Set Up todo with ID 66
-Set Up todo with ID 67
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -177,7 +184,7 @@ Set Up todo with ID 67
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 29-Jan-2024 6:36:21 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 30-Jan-2024 10:10:40 PM</p>
 </div>
 </div>
 </body>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittest.ProjectUnitTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2024-01-31T03:10:34" hostname="Omars-MacBook-Pro.local" time="5.297">
+  <properties/>
+  <testcase name="testGetOptionsId()" classname="unittest.ProjectUnitTest" time="2.327"/>
+  <testcase name="testGetAllProjectOptions()" classname="unittest.ProjectUnitTest" time="0.246"/>
+  <testcase name="testGetProjectIDXml()" classname="unittest.ProjectUnitTest" time="0.119"/>
+  <testcase name="testCreateDuplicateRelationship()" classname="unittest.ProjectUnitTest" time="0.133"/>
+  <testcase name="testGetAllRelationshipOptions()" classname="unittest.ProjectUnitTest" time="0.108"/>
+  <testcase name="testGetProjectIDJson()" classname="unittest.ProjectUnitTest" time="0.114"/>
+  <testcase name="testGetAllNonCompletedProjects()" classname="unittest.ProjectUnitTest" time="0.135"/>
+  <testcase name="testCreateRelationship()" classname="unittest.ProjectUnitTest" time="0.125"/>
+  <testcase name="testGetAllRelationshipHeader()" classname="unittest.ProjectUnitTest" time="0.117"/>
+  <testcase name="testCreateProjectMalformedPayloadXml()" classname="unittest.ProjectUnitTest" time="0.088"/>
+  <testcase name="testUpdateProjectPost()" classname="unittest.ProjectUnitTest" time="0.115"/>
+  <testcase name="testCreateProjectXml()" classname="unittest.ProjectUnitTest" time="0.148"/>
+  <testcase name="testPatchProjectID()" classname="unittest.ProjectUnitTest" time="0.13"/>
+  <testcase name="testGetAllProjectHeaders()" classname="unittest.ProjectUnitTest" time="0.198"/>
+  <testcase name="testCreateProjectMalformedPayloadJson()" classname="unittest.ProjectUnitTest" time="0.102"/>
+  <testcase name="testGetProjectFakeId()" classname="unittest.ProjectUnitTest" time="0.118"/>
+  <testcase name="testGetProjectHeaderId()" classname="unittest.ProjectUnitTest" time="0.093"/>
+  <testcase name="testUpdateProjectPutDeletesRelationships()" classname="unittest.ProjectUnitTest" time="0.146"/>
+  <testcase name="testDeleteProject()" classname="unittest.ProjectUnitTest" time="0.089"/>
+  <testcase name="testCreateProjectJson()" classname="unittest.ProjectUnitTest" time="0.106"/>
+  <testcase name="testGetAllProjectIdsJson()" classname="unittest.ProjectUnitTest" time="0.108"/>
+  <testcase name="testGetAllTodosOfProject()" classname="unittest.ProjectUnitTest" time="0.1"/>
+  <testcase name="testUpdateProjectPut()" classname="unittest.ProjectUnitTest" time="0.103"/>
+  <testcase name="testGetAllProjectIdsXml()" classname="unittest.ProjectUnitTest" time="0.092"/>
+  <testcase name="testServer()" classname="unittest.ProjectUnitTest" time="0.114"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
