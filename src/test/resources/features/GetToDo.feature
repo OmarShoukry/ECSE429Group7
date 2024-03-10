@@ -1,5 +1,5 @@
 Feature: Get a ToDo
-  As a user, I want to get a specific todo so that I can retrieve its details
+  As a user, I want to get a specific todo task so that I can retrieve its details
 
   Background:
     Given the service is running

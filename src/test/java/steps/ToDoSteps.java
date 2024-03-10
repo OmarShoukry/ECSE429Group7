@@ -227,4 +227,19 @@ public class ToDoSteps {
                 .when()
                 .get(this.endpoint);
     }
+
+    @And("I should receive a list of projects with {string}")
+    public void getListOfProjects(String title) {
+        response.then().body("projects.title", hasItem(title));
+    }
+
+    @And("the response should contain a list of todos")
+    public void verifyListOfTodos() {
+        response.then()
+                .body("size()", greaterThan(0));
+    }
+    @And("I should receive an empty list of projects")
+    public void getListOfProjectsEmpty() {
+        response.then().body("projects", hasSize(0));
+    }
 }
