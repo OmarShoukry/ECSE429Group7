@@ -4,6 +4,7 @@ Feature: Update Project
   Background:
     Given the service is running
 
+  # Normal Flow
   Scenario Outline: Update a project's id, title and description successfully
     When I send a PUT request to "/projects/<id>" with title "Updated Project" and description "Updated Description"
     Then I should receive a response status code of 200
@@ -14,11 +15,13 @@ Feature: Update Project
       | 1  | New Proj1        | Updated Description1     |
       | 1  | New Proj2        | Updated Description2     |
 
+  # Alternate Flow
   Scenario: Update a non-existing project
     When I send a PUT request to "/projects/-1" with title "title" and description "description"
     Then I should receive a response status code of 404
     And the response should contain the error message "Invalid GUID for -1 entity project"
 
+  # Error Flow
   Scenario: Update a project with string value of a boolean
     When I send a PUT request to "/projects/:id" with active "True"
     Then I should receive a response status code of 400

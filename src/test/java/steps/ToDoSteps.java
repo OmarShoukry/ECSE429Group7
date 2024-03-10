@@ -176,4 +176,37 @@ public class ToDoSteps {
                 .when()
                 .put(this.endpoint);
     }
+
+    @When("I send a DELETE request to {string}")
+    public void deleteToDoOrProject(String endpoint) {
+        this.endpoint = endpoint;
+        response = given()
+                .contentType("application/json")
+                .when()
+                .delete(this.endpoint);
+    }
+
+    @And("the todo at {string} should be deleted")
+    public void verifyDeletedToDo(String endpoint) {
+        this.endpoint = endpoint;
+        response = given()
+                .contentType("application/json")
+                .when()
+                .delete(this.endpoint);
+
+        response.then()
+                .statusCode(404);
+    }
+
+    @And("the project at {string} should be deleted")
+    public void verifyDeletedProject(String endpoint) {
+        this.endpoint = endpoint;
+        response = given()
+                .contentType("application/json")
+                .when()
+                .delete(this.endpoint);
+
+        response.then()
+                .statusCode(404);
+    }
 }
