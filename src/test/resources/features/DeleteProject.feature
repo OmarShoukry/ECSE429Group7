@@ -10,7 +10,6 @@ Feature: Delete Project
     Then I should receive a response status code of 200
     And the project at "/projects/<id>" should be deleted
 
-
   # Alternative Flow
   Scenario Outline: Delete a project after creating a new one
     When I send a POST request to "projects" with title "title" and description "description"

@@ -209,4 +209,22 @@ public class ToDoSteps {
         response.then()
                 .statusCode(404);
     }
+
+    @When("I send a GET request to {string}")
+    public void getToDoOrProject(String endpoint) {
+        this.endpoint = endpoint;
+        response = given()
+                .contentType("application/json")
+                .when()
+                .get(this.endpoint);
+    }
+
+    @When("I send a GET request to {string} using filter {string}")
+    public void getToDoOrProjectUsingFilter(String endpoint, String filter) {
+        this.endpoint = endpoint;
+        response = given()
+                .queryParam("title", filter)
+                .when()
+                .get(this.endpoint);
+    }
 }
