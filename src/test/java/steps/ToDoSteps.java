@@ -33,7 +33,7 @@ public class ToDoSteps {
             } catch (Exception e) {
             }
             try {
-                Thread.sleep(500);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -60,7 +60,7 @@ public class ToDoSteps {
     private void startService() {
         try {
             serviceProcess = new ProcessBuilder("java", "-jar", "runTodoManagerRestAPI-1.5.5.jar").start();
-            Thread.sleep(500);
+            Thread.sleep(1000);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

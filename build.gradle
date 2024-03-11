@@ -9,6 +9,12 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
 dependencies {
     testImplementation 'io.rest-assured:rest-assured:5.4.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
@@ -26,3 +32,4 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
