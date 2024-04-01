@@ -147,7 +147,7 @@ public class ToDoPerformanceTest {
                 double deleteMemory = (double) deleteUsage.get("Memory Usage");
 
                 // Write Usage to file
-                recordDeleteUsage(writer, z, deleteEnd, deleteCpu, deleteMemory);
+                recordDeleteUsage(writer, z + 1 , deleteEnd, deleteCpu, deleteMemory);
                 //sleep
                 try {
                     Thread.sleep(5);
@@ -163,13 +163,8 @@ public class ToDoPerformanceTest {
 
     public static void main(String[] args) {
         ToDoPerformanceTest test = new ToDoPerformanceTest();
-        int nrTests = 1000;
-        long totalStart = System.nanoTime();
+        int nrTests = 100000;
         test.runTest(nrTests);
-        long totalEnd = System.nanoTime();
-
-        double totalTime = (totalEnd - totalStart) / 1_000_000_000.0;
-        System.out.println("Total time to create, update and delete " + nrTests + " objects is " + totalTime + " seconds.");
     }
 
 }

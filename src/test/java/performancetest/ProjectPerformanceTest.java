@@ -94,7 +94,7 @@ public class ProjectPerformanceTest {
         try(FileWriter writer = new FileWriter("createAndUpdateUsageProject.csv")) {
             writer.write("Test Number , Time to create object (ns) , Time To update object (ns) , CPU usage to create object (%) , CPU Usage to update time (%) , Memory usage to create object (bytes) , Memory usage to update time (bytes) \n");
             for (int i = 1; i<=n; i++){
-                // Create ToDo object and record usage
+                // Create Project object and record usage
                 long createStart = System.nanoTime();
                 Response createToDoResponse = createProject("Title Nr. " + i, "Description Nr. " + i, false);
                 long createEnd = System.nanoTime() - createStart;
@@ -112,7 +112,7 @@ public class ProjectPerformanceTest {
                 double createCpu = (double) createUsage.get("CPU Usage");
                 double createMemory = (double) createUsage.get("Memory Usage");
 
-                // Update ToDo object and record usage
+                // Update Project object and record usage
                 long updateStart = System.nanoTime();
                 updateProject("New Title Nr. " + i, "New Description Nr. " + i, true, id);
                 long updateEnd = System.nanoTime() - updateStart;
@@ -139,7 +139,7 @@ public class ProjectPerformanceTest {
         try(FileWriter writer = new FileWriter("DeleteUsageProject.csv")) {
             writer.write("Test Number , Time to delete object (ns) , CPU usage to delete object (%) , Memory usage to delete object (bytes)\n");
             for (int z = 0; z < ids.size(); z++){
-                // Delete ToDo object and record usage
+                // Delete Project object and record usage
                 long deleteStart = System.nanoTime();
                 deleteProject(ids.get(z));
                 long deleteEnd = System.nanoTime();
@@ -149,7 +149,7 @@ public class ProjectPerformanceTest {
                 double deleteMemory = (double) deleteUsage.get("Memory Usage");
 
                 // Write Usage to file
-                recordDeleteUsage(writer, z, deleteEnd, deleteCpu, deleteMemory);
+                recordDeleteUsage(writer, z + 1 , deleteEnd, deleteCpu, deleteMemory);
                 //sleep
                 try {
                     Thread.sleep(5);
@@ -165,13 +165,8 @@ public class ProjectPerformanceTest {
 
     public static void main(String[] args) {
         ProjectPerformanceTest test = new ProjectPerformanceTest();
-        int nrTests = 1000;
-        long totalStart = System.nanoTime();
+        int nrTests = 100000;
         test.runTest(nrTests);
-        long totalEnd = System.nanoTime();
-
-        double totalTime = (totalEnd - totalStart) / 1_000_000_000.0;
-        System.out.println("Total time to create, update and delete " + nrTests + " objects is " + totalTime + " seconds.");
     }
 
 }
